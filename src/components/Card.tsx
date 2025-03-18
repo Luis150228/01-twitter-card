@@ -1,12 +1,15 @@
 import { BtnSistem } from "./Button"
 import './Card.css'
 
-export const CardTwitter = ()=>{
+export const CardTwitter = ({ user, name, avatar, follow} : {user : string, name: string, avatar: string, follow: boolean})=>{
     return(
         <div className="card-twitter">
-            <img src="https://img.freepik.com/vector-premium/imagen-perfil-avatar-hombre-aislada-fondo-imagen-profil-avatar-hombre_1293239-4870.jpg" alt="imagen de perfil de usuario" />
-            <span>Francisco Armando Hernandez Fernandez</span>
-            <BtnSistem/>
+            <img src={avatar} alt={`imagen de perfil de usuario ${user}`} />
+            <div className="user-identy">
+                <span className="name-long">{name}</span>
+                <span className="name-short">{user}</span>
+            </div>
+            <BtnSistem estatus={follow}/>
         </div>
     )
 }

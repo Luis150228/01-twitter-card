@@ -1,5 +1,6 @@
 import './App.css'
 import { CardTwitter } from './components/Card'
+import { users } from './utils/users'
 
 function App() {
 
@@ -11,7 +12,11 @@ function App() {
         </p>
       </div>
       <div>
-        <CardTwitter/>
+      {users.map(item => 
+        (
+          <CardTwitter key={item.username} user={item.username} name={item.user} avatar={item.img} follow={item.isFollow} />
+        )
+        )}
       </div>
     </>
   )
