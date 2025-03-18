@@ -7,7 +7,7 @@ function App() {
     <>
       <div>
         <p>
-          Card Social Network
+          Inventary System
         </p>
       </div>
       <div>
